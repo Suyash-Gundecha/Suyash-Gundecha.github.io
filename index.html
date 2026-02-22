@@ -24,6 +24,7 @@
             <div class="nav-menu" id="navMenu">
                 <a href="#home" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
@@ -153,6 +154,112 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Professional Journey</span>
+                <h2 class="section-title">Work Experience</h2>
+            </div>
+            
+            <div class="timeline">
+                <!-- Experience 1: Kinetic Engineering (Right side) -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <h3>Engineering Design Intern</h3>
+                            <h4>Kinetic Engineering PVT LTD</h4>
+                            <span class="experience-date">May 2024 - Jul 2024</span>
+                            <span class="experience-location">Pune, India</span>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Executed simulations and analyzed design feasibility for product integration in the EV sector</li>
+                            <li>Collaborated with the design team to increase prototyping speed by 8% using Creo Parametric</li>
+                            <li>Remodelled a retractable cable reel, reducing the volume by 24%, successfully reaching design specifications</li>
+                        </ul>
+                        <button class="btn btn-secondary" onclick="openExperienceModal('kinetic')" style="margin-top: 12px;">
+                            Read More
+                        </button>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="assets/kinetic-final-design.png" alt="Optimized Cable Reel Design" class="cad-image">
+                    </div>
+                </div>
+                
+                <!-- Experience 2: Klassic Wheels (Left side) -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <h3>Engineering Intern</h3>
+                            <h4>Klassic Wheels LTD</h4>
+                            <span class="experience-date">Jun 2023 - Jul 2023</span>
+                            <span class="experience-location">Ahmednagar, India</span>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Shadowed senior engineers in the design, production, and quality control of wheel rims</li>
+                            <li>Conducted research and assisted in optimizing rim designs for enhanced durability and performance</li>
+                            <li>Analyzed production processes for the improvement in product quality standards</li>
+                        </ul>
+                        <button class="btn btn-secondary" onclick="openExperienceModal('klassic')" style="margin-top: 12px;">
+                            Read More
+                        </button>
+                    </div>
+                    <div class="timeline-image">
+                        <div class="image-placeholder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2v20M2 12h20"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 3: Unbox Robotics (Right side) -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <h3>Mechanical Engineering Intern</h3>
+                            <h4>Unbox Robotics</h4>
+                            <span class="experience-date">Jun 2022 - Jul 2022</span>
+                            <span class="experience-location">Pune, India</span>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Collaborated to simulate and model the frictional behavior of materials used in robot wheel construction</li>
+                            <li>Researched material properties and surface interactions to understand wheel optimization</li>
+                            <li>Designed a test model for evaluating coefficient of friction, contributing to a 10% improvement in traction</li>
+                        </ul>
+                        <button class="btn btn-secondary" onclick="openExperienceModal('unbox')" style="margin-top: 12px;">
+                            Read More
+                        </button>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="assets/unbox-friction-rig.png" alt="Friction Testing Rig" class="cad-image">
+                    </div>
+                </div>
+                
+                <!-- Experience 4: Taekwondo (Left side, no modal) -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <h3>Assistant Teacher</h3>
+                            <h4>International World Federation Taekwondo</h4>
+                            <span class="experience-date">Feb 2019 - Aug 2023</span>
+                            <span class="experience-location">Singapore</span>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Taught Taekwondo techniques, focusing on punching and kicking fundamentals</li>
+                            <li>Led group sessions of 20+ students to reinforce technique and discipline, fostering growth and self-improvement</li>
+                            <li>Provided one-on-one coaching to underperforming students, helping 6 advance to the next level</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="assets/taekwondo-blackbelt.jpeg" alt="Taekwondo Black Belt Certification">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
@@ -211,6 +318,29 @@
                             <li>Developed the game using SolidWorks, AutoCAD, MATLAB, Arduino IDE, and laser cutting for decision-making simulations</li>
                         </ul>
                         <button class="btn btn-primary" onclick="openProjectModal('sustainability-cities')" style="margin-top: 16px;">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3: Nightlight Power Bank -->
+                <div class="project-card" data-category="design" data-animate>
+                    <div class="project-image">
+                        <img src="assets/powerbank-final.png" alt="Nightlight Power Bank Final Product">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Product Design</span>
+                            <span>CAD 2D</span>
+                            <span>CAD 3D</span>
+                            <span>Product Development</span>
+                            <span>2023</span>
+                        </div>
+                        <h3>Nightlight Power Bank</h3>
+                        <ul class="project-highlights">
+                            <li>Designed a 2-in-1 compact device for charging electronics and serving as a torch for outdoor activities using 3D modeling, CNC machining, and laser cutting</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="openProjectModal('nightlight-powerbank')" style="margin-top: 16px;">
                             View Details
                         </button>
                     </div>

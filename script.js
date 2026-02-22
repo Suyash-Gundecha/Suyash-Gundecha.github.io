@@ -123,6 +123,71 @@ filterBtns.forEach(btn => {
 // ===================================
 // PROJECT MODALS
 // ===================================
+// ===================================
+// EXPERIENCE DATA
+// ===================================
+const experienceData = {
+    'kinetic': {
+        title: 'Product Design Intern',
+        company: 'Kinetic Engineering Limited',
+        location: 'Pune, India',
+        date: 'May 2024 - Jul 2024',
+        project: 'Retractable Cable Reel — Reverse Engineering & Mechanism Optimization',
+        images: [
+            { src: 'assets/kinetic-final-design.png', caption: 'Final Optimized Design (Iteration 6)' },
+            { src: 'assets/kinetic-reverse-engineering.png', caption: 'Reverse Engineered Existing Cable Reel' }
+        ],
+        details: [
+            'Reverse engineered an existing retractable reel through teardown to understand spring tension, cam–follower locking, and cable routing architecture',
+            'Reconstructed the complete assembly in PTC Creo Parametric, modelling spring geometry, cam profile, and missing internal components',
+            'Iteratively developed Model 1 → Iteration 6, improving internal packaging and mechanism compactness while maintaining cable length and plug interface constraints',
+            'Performed feasibility analysis evaluating tolerance interaction, locking stability, and cable retraction reliability',
+            'Assessed PVC housing for insulation safety, impact resistance, weight, and manufacturability',
+            'Achieved ~24% volume reduction, enabling improved packaging efficiency and faster prototyping through simulation-backed validation'
+        ],
+        technologies: ['PTC Creo Parametric', 'CAD Modeling', 'Reverse Engineering', 'Feasibility Analysis', 'Design Optimization']
+    },
+    'klassic': {
+        title: 'Manufacturing & Quality Exposure Intern',
+        company: 'Klassic Wheels',
+        location: 'Ahmednagar, India',
+        date: 'Jun 2023 - Jul 2023',
+        project: null,
+        images: [],
+        details: [
+            'Visited multiple manufacturing facilities including chemical processing (soap), food processing (baked goods), and wheel rim manufacturing to understand process workflows, plant operations, and production management practices',
+            'Studied end-to-end shop floor integration at Klassic Wheels, observing paint shop operations, manufacturing and assembly lines, quality control testing, and logistics flow',
+            'Analyzed how different production stages interact to maintain throughput, traceability, and manufacturing efficiency',
+            'Gained exposure to quality control methodologies including material composition verification, dimensional inspection, and tensile/compression testing for structural validation',
+            'Developed practical understanding of process standardization, inspection checkpoints, and manufacturing quality assurance in automotive components'
+        ],
+        technologies: ['Quality Control', 'Manufacturing Processes', 'Process Optimization', 'Production Management', 'Automotive Components']
+    },
+    'unbox': {
+        title: 'Mechanical Design Intern',
+        company: 'Unbox Robotics',
+        location: 'Pune, India',
+        date: 'Jun 2022 - Jul 2022',
+        project: 'Robot Mobility Validation — Wheel–Floor Friction & Stability Testing',
+        images: [
+            { src: 'assets/unbox-friction-rig.png', caption: 'Simplified Friction Testing Rig (NDA-compliant version)' }
+        ],
+        details: [
+            'Partnered with robotics and mechanical teams to investigate wheel slip failure modes impacting robot navigation, load handling, and motion control stability',
+            'Applied tribology principles to study wheel–floor interaction across varying warehouse tile materials and robot loading conditions',
+            'Designed and CAD-modelled a controlled friction testing rig incorporating adjustable load distribution and incline fixtures to replicate real robot acceleration, braking, and turning scenarios',
+            'Executed validation testing and DOE-style experiments to measure coefficient of friction while ensuring repeatability, parameter consistency, and realistic operating conditions',
+            'Analyzed results to define minimum friction thresholds supporting reliable robot traction, path-following accuracy, and package stability during autonomous movement',
+            'Communicated findings through structured engineering reports and cross-functional reviews, influencing wheel selection and floor compatibility decisions',
+            'Delivered a functional prototype test setup that strengthened robot mobility robustness, slip prevention, and system-level reliability in warehouse deployments'
+        ],
+        technologies: ['Tribology', 'CAD Modeling', 'Test Fixture Design', 'DOE Experiments', 'Friction Analysis', 'Engineering Reports']
+    }
+};
+
+// ===================================
+// PROJECT DATA
+// ===================================
 const projectData = {
     'trash-compactor': {
         title: 'Mini Trash Compactor',
@@ -204,6 +269,36 @@ const projectData = {
             'Completed a comprehensive technical report covering design rationale, iterations, system architecture, and learning outcomes'
         ],
         skills: ['MATLAB, C++, and Arduino IDE Programming', '3D CAD Modelling (AutoCAD, SolidWorks)', 'Laser Cutting & 3D Printing', 'Interactive Hardware Prototyping', 'User-Centered Design', 'Technical Writing and Design Documentation']
+    },
+    'nightlight-powerbank': {
+        title: 'Nightlight Power Bank',
+        category: 'Product Design & Development',
+        date: '2023',
+        overview: 'This client‑based project involved designing a durable power bank with an integrated night light for trekking use. The device needed to be frost‑resistant, compact, weather‑proof, and capable of providing gentle illumination inside a tent without consuming excessive power.',
+        technologies: ['3D Modeling', 'CNC Machining', 'Laser Cutting', 'Product Design', 'CAD'],
+        images: [
+            { src: 'assets/powerbank-final.png', caption: 'Final Product Design' },
+            { src: 'assets/powerbank-justification.png', caption: 'Design Justification Analysis' }
+        ],
+        designSteps: [
+            'Conducted a client interview to understand usage patterns and environmental constraints',
+            'Identified key design objectives: durability, frost resistance, light diffusion, portability',
+            'Explored multiple design directions including form factor, battery size, and outer shell geometry',
+            'Designed internal component layout to maximize efficiency and compactness',
+            'Tested prototypes for weather resistance, light output, and usability'
+        ],
+        challenges: [
+            'Ensuring frost‑resistant housing without increasing weight',
+            'Choosing lighting components that produce soft illumination in enclosed spaces',
+            'Balancing power capacity with portability for trekking conditions',
+            'Designing for impact resistance and environmental wear'
+        ],
+        results: [
+            'Successfully created a prototype optimized for camping use that is capable of withstanding cold and outdoor exposure',
+            'Integrated high‑efficiency LEDs for gentle night illumination in tents',
+            'Delivered a compact and lightweight product tailored to client needs'
+        ],
+        skills: ['Client-driven Product Development', 'Environmental and Durability-focused Engineering', 'Prototype Testing and Refinement', 'Systems Integration and Mechanical Design']
     }
 };
 
@@ -438,3 +533,74 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Log page load for analytics (optional)
 console.log('Portfolio loaded successfully! 🚀');
 console.log('Built with ❤️ by Alvin Reji');
+
+// ===================================
+// EXPERIENCE MODAL
+// ===================================
+function openExperienceModal(experienceId) {
+    console.log('Opening experience modal for:', experienceId);
+    const modal = document.getElementById('projectModal');
+    const modalBody = document.getElementById('modalBody');
+    const experience = experienceData[experienceId];
+    
+    console.log('Experience data:', experience);
+    
+    if (!experience) {
+        console.error('Experience not found:', experienceId);
+        return;
+    }
+    
+    // Build images section HTML if images exist
+    let imagesHTML = '';
+    if (experience.images && experience.images.length > 0) {
+        imagesHTML = `
+            <div class="modal-section">
+                <h3>Project Images</h3>
+                <div class="modal-images">
+                    ${experience.images.map(img => `
+                        <div class="modal-image-item">
+                            <img src="${img.src}" alt="${img.caption}">
+                            <p class="image-caption">${img.caption}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    }
+    
+    modalBody.innerHTML = `
+        <div class="modal-header">
+            <span class="modal-category">${experience.company}</span>
+            <h2 class="modal-title">${experience.title}</h2>
+            <span class="modal-date">${experience.date} • ${experience.location}</span>
+        </div>
+        
+        ${experience.project ? `
+        <div class="modal-section">
+            <h3>Project Focus</h3>
+            <p><strong>${experience.project}</strong></p>
+        </div>
+        ` : ''}
+        
+        ${imagesHTML}
+        
+        <div class="modal-section">
+            <h3>Key Responsibilities & Achievements</h3>
+            <ul class="modal-list">
+                ${experience.details.map(detail => `<li>${detail}</li>`).join('')}
+            </ul>
+        </div>
+        
+        ${experience.technologies ? `
+        <div class="modal-section">
+            <h3>Technologies & Skills</h3>
+            <div class="modal-tags">
+                ${experience.technologies.map(tech => `<span class="badge">${tech}</span>`).join('')}
+            </div>
+        </div>
+        ` : ''}
+    `;
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
