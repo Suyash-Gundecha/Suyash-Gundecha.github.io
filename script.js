@@ -140,7 +140,7 @@ const experienceData = {
         details: [
             'Reverse engineered an existing retractable reel through teardown to understand spring tension, cam–follower locking, and cable routing architecture',
             'Reconstructed the complete assembly in PTC Creo Parametric, modelling spring geometry, cam profile, and missing internal components',
-            'Iteratively developed Model 1 → Iteration 6, improving internal packaging and mechanism compactness while maintaining cable length and plug interface constraints',
+            'Iteratively developed Iteration 1 → Iteration 6, improving internal packaging and mechanism compactness while maintaining cable length and plug interface constraints',
             'Performed feasibility analysis evaluating tolerance interaction, locking stability, and cable retraction reliability',
             'Assessed PVC housing for insulation safety, impact resistance, weight, and manufacturability',
             'Achieved ~24% volume reduction, enabling improved packaging efficiency and faster prototyping through simulation-backed validation'
@@ -153,7 +153,10 @@ const experienceData = {
         location: 'Ahmednagar, India',
         date: 'Jun 2023 - Jul 2023',
         project: null,
-        images: [],
+        images: [
+            { src: 'assets/klassic-casting-line.jpeg', caption: 'Die Casting Machines on the Manufacturing Floor' },
+            { src: 'assets/klassic-wheel-rim.jpeg', caption: 'Finished Aluminium Wheel Rim' }
+        ],
         details: [
             'Visited multiple manufacturing facilities including chemical processing (soap), food processing (baked goods), and wheel rim manufacturing to understand process workflows, plant operations, and production management practices',
             'Studied end-to-end shop floor integration at Klassic Wheels, observing paint shop operations, manufacturing and assembly lines, quality control testing, and logistics flow',
